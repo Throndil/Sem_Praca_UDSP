@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="UdSP (cdcae47d-b84e-4e50-8fbb-4f4dfd08e8fc)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/Sem_Praca_UDSP" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="frios2 (d2c1f366-b76f-4098-9d44-bf69dc948f69)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
