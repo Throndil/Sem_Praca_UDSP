@@ -1,0 +1,6 @@
+ID;Name;Surname;TelephoneNumber
+int;string;string;long
+1;Creg;Glo;99.87500
+2;Blo;Mkrva;25.65000
+3;Ded;Alo;25.66000
+4;Alo;Pog;99.85000
