@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/Sem_Praca_UDSP/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+table.h
+/tmp/Sem_Praca_UDSP/table.h
+
+/tmp/Sem_Praca_UDSP/table.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+unistd.h
+-
+limits.h
+-
+table.h
+/tmp/Sem_Praca_UDSP/table.h
+
+/tmp/Sem_Praca_UDSP/table.h
+

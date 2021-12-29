@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/testgitu.dir/main.c.o CMakeFiles/testgitu.dir/table.c.o -o testgitu 

@@ -1,0 +1,3 @@
+/tmp/Sem_Praca_UDSP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/tmp/Sem_Praca_UDSP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/tmp/Sem_Praca_UDSP/cmake-build-debug/CMakeFiles/Sem_Praca_UDSP.dir
