@@ -22,6 +22,7 @@ static int sortDouble (const void* data,const void* data2) {
 }
 
 int main() {
+
     Table t;
     initTable(&t);
     openTable(&t,"../Skuska_tab.txt" );
@@ -57,5 +58,6 @@ int main() {
     //sortTable(&t, "TelephoneNumber", (void*) sortDouble, DOUBLE_TYPE);
     //printTable(&t);
     printDataWithSubstr(&t, "Alo");
+  
     return 0;
 }
