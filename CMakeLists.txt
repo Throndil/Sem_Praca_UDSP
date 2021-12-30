@@ -3,4 +3,4 @@ project(SemestralnaPracaUdSP C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(SemestralnaPracaUdSP main.c table.h table.c)
+add_executable(SemestralnaPracaUdSP main.c table.h table.c manager.h manager.c server.h server.c client.h client.c)

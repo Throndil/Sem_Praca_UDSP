@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <limits.h>
+#include <ctype.h>
 #include "table.h"
 
 #define ROW_LENGTH 500
@@ -28,6 +29,18 @@ static int numberOfRows(char* name) {
     fclose(tab_file);
 
     return count - 2;
+}
+
+static void toLowerArray(char **array) {
+    int i = 0, j;
+    while (array[i] != NULL){
+        j = 0;
+        while (array[i][j] != '\0') {
+            array[i][j] = tolower(array[i][j]);
+            j++;
+        }
+        i++;
+    }
 }
 
 static int numberOfColumns(char* name) {
@@ -177,6 +190,7 @@ _Bool createTable(char name[TABLE_NAME_SIZE], int num_columns, char** column_nam
     char fileName[TABLE_NAME_SIZE];
     strcpy(fileName, name);
     strcat(fileName, "_tab.txt");
+    //toLowerArray(types);
     //printf("%s", fileName);
     if (tableExists(fileName)) {
         perror("File already exists.");
@@ -205,7 +219,6 @@ _Bool createTable(char name[TABLE_NAME_SIZE], int num_columns, char** column_nam
 
     fclose(tab_file);
 
-    printf("Table created successfully");
     return true;
 }
 

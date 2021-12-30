@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.UCaAG7Yp0i
+CMAKE_SOURCE_DIR = /tmp/tmp.3BDuv74PQz
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.UCaAG7Yp0i/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.3BDuv74PQz/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles /tmp/tmp.UCaAG7Yp0i/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles /tmp/tmp.3BDuv74PQz/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,33 @@ SemestralnaPracaUdSP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/build
 .PHONY : SemestralnaPracaUdSP/fast
 
+client.o: client.c.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o
+.PHONY : client.c.o
+
+client.i: client.c.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/client.c.i
+.PHONY : client.c.i
+
+client.s: client.c.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/client.c.s
+.PHONY : client.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -168,6 +195,60 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/main.c.s
 .PHONY : main.c.s
+
+manager.o: manager.c.o
+
+.PHONY : manager.o
+
+# target to build an object file
+manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o
+.PHONY : manager.c.o
+
+manager.i: manager.c.i
+
+.PHONY : manager.i
+
+# target to preprocess a source file
+manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.i
+.PHONY : manager.c.i
+
+manager.s: manager.c.s
+
+.PHONY : manager.s
+
+# target to generate assembly for a file
+manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.s
+.PHONY : manager.c.s
+
+server.o: server.c.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o
+.PHONY : server.c.o
+
+server.i: server.c.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/server.c.i
+.PHONY : server.c.i
+
+server.s: server.c.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SemestralnaPracaUdSP.dir/build.make CMakeFiles/SemestralnaPracaUdSP.dir/server.c.s
+.PHONY : server.c.s
 
 table.o: table.c.o
 
@@ -205,9 +286,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SemestralnaPracaUdSP"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... manager.o"
+	@echo "... manager.i"
+	@echo "... manager.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 	@echo "... table.o"
 	@echo "... table.i"
 	@echo "... table.s"

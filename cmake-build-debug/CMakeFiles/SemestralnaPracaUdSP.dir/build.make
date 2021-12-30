@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.UCaAG7Yp0i
+CMAKE_SOURCE_DIR = /tmp/tmp.3BDuv74PQz
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.UCaAG7Yp0i/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.3BDuv74PQz/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SemestralnaPracaUdSP.dir/depend.make
@@ -78,43 +78,88 @@ include CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
 
 CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o: CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
 CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o -c /tmp/tmp.UCaAG7Yp0i/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o -c /tmp/tmp.3BDuv74PQz/main.c
 
 CMakeFiles/SemestralnaPracaUdSP.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SemestralnaPracaUdSP.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.UCaAG7Yp0i/main.c > CMakeFiles/SemestralnaPracaUdSP.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.3BDuv74PQz/main.c > CMakeFiles/SemestralnaPracaUdSP.dir/main.c.i
 
 CMakeFiles/SemestralnaPracaUdSP.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SemestralnaPracaUdSP.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.UCaAG7Yp0i/main.c -o CMakeFiles/SemestralnaPracaUdSP.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.3BDuv74PQz/main.c -o CMakeFiles/SemestralnaPracaUdSP.dir/main.c.s
 
 CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o: CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
 CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o: ../table.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o -c /tmp/tmp.UCaAG7Yp0i/table.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o -c /tmp/tmp.3BDuv74PQz/table.c
 
 CMakeFiles/SemestralnaPracaUdSP.dir/table.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SemestralnaPracaUdSP.dir/table.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.UCaAG7Yp0i/table.c > CMakeFiles/SemestralnaPracaUdSP.dir/table.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.3BDuv74PQz/table.c > CMakeFiles/SemestralnaPracaUdSP.dir/table.c.i
 
 CMakeFiles/SemestralnaPracaUdSP.dir/table.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SemestralnaPracaUdSP.dir/table.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.UCaAG7Yp0i/table.c -o CMakeFiles/SemestralnaPracaUdSP.dir/table.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.3BDuv74PQz/table.c -o CMakeFiles/SemestralnaPracaUdSP.dir/table.c.s
+
+CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o: CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
+CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o: ../manager.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o -c /tmp/tmp.3BDuv74PQz/manager.c
+
+CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.3BDuv74PQz/manager.c > CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.i
+
+CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.3BDuv74PQz/manager.c -o CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.s
+
+CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o: CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
+CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o: ../server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o -c /tmp/tmp.3BDuv74PQz/server.c
+
+CMakeFiles/SemestralnaPracaUdSP.dir/server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SemestralnaPracaUdSP.dir/server.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.3BDuv74PQz/server.c > CMakeFiles/SemestralnaPracaUdSP.dir/server.c.i
+
+CMakeFiles/SemestralnaPracaUdSP.dir/server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SemestralnaPracaUdSP.dir/server.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.3BDuv74PQz/server.c -o CMakeFiles/SemestralnaPracaUdSP.dir/server.c.s
+
+CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o: CMakeFiles/SemestralnaPracaUdSP.dir/flags.make
+CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o: ../client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o -c /tmp/tmp.3BDuv74PQz/client.c
+
+CMakeFiles/SemestralnaPracaUdSP.dir/client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SemestralnaPracaUdSP.dir/client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /tmp/tmp.3BDuv74PQz/client.c > CMakeFiles/SemestralnaPracaUdSP.dir/client.c.i
+
+CMakeFiles/SemestralnaPracaUdSP.dir/client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SemestralnaPracaUdSP.dir/client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /tmp/tmp.3BDuv74PQz/client.c -o CMakeFiles/SemestralnaPracaUdSP.dir/client.c.s
 
 # Object files for target SemestralnaPracaUdSP
 SemestralnaPracaUdSP_OBJECTS = \
 "CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o" \
-"CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
+"CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o" \
+"CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o" \
+"CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o" \
+"CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o"
 
 # External object files for target SemestralnaPracaUdSP
 SemestralnaPracaUdSP_EXTERNAL_OBJECTS =
 
 SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o
 SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o
+SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o
+SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o
+SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o
 SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/build.make
 SemestralnaPracaUdSP: CMakeFiles/SemestralnaPracaUdSP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable SemestralnaPracaUdSP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable SemestralnaPracaUdSP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SemestralnaPracaUdSP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +172,6 @@ CMakeFiles/SemestralnaPracaUdSP.dir/clean:
 .PHONY : CMakeFiles/SemestralnaPracaUdSP.dir/clean
 
 CMakeFiles/SemestralnaPracaUdSP.dir/depend:
-	cd /tmp/tmp.UCaAG7Yp0i/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.UCaAG7Yp0i /tmp/tmp.UCaAG7Yp0i /tmp/tmp.UCaAG7Yp0i/cmake-build-debug /tmp/tmp.UCaAG7Yp0i/cmake-build-debug /tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/tmp.3BDuv74PQz/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.3BDuv74PQz /tmp/tmp.3BDuv74PQz /tmp/tmp.3BDuv74PQz/cmake-build-debug /tmp/tmp.3BDuv74PQz/cmake-build-debug /tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SemestralnaPracaUdSP.dir/depend
 
