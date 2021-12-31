@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o"
   "CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o"
+  "CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o"
+  "CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o"
   "CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
   "SemestralnaPracaUdSP"
   "SemestralnaPracaUdSP.pdb"
