@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Sem_Praca_UDSP.dir/main.c.o"
+  "CMakeFiles/Sem_Praca_UDSP.dir/table.c.o"
   "Sem_Praca_UDSP"
   "Sem_Praca_UDSP.pdb"
 )

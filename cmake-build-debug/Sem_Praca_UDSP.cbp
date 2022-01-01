@@ -79,6 +79,12 @@
 		<Unit filename="/tmp/Sem_Praca_UDSP/main.c">
 			<Option target="Sem_Praca_UDSP"/>
 		</Unit>
+		<Unit filename="/tmp/Sem_Praca_UDSP/table.c">
+			<Option target="Sem_Praca_UDSP"/>
+		</Unit>
+		<Unit filename="/tmp/Sem_Praca_UDSP/table.h">
+			<Option target="Sem_Praca_UDSP"/>
+		</Unit>
 		<Unit filename="/tmp/Sem_Praca_UDSP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
