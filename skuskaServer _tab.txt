@@ -1,0 +1,2 @@
+ID;Monka;Omega;KEK
+int;string;string;int

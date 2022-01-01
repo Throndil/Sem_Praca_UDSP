@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/tmp/tmp.UCaAG7Yp0i/main.c" "/tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o"
-  "/tmp/tmp.UCaAG7Yp0i/table.c" "/tmp/tmp.UCaAG7Yp0i/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
+  "/tmp/tmp.3BDuv74PQz/client.c" "/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o"
+  "/tmp/tmp.3BDuv74PQz/main.c" "/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o"
+  "/tmp/tmp.3BDuv74PQz/manager.c" "/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o"
+  "/tmp/tmp.3BDuv74PQz/server.c" "/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o"
+  "/tmp/tmp.3BDuv74PQz/table.c" "/tmp/tmp.3BDuv74PQz/cmake-build-debug/CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
