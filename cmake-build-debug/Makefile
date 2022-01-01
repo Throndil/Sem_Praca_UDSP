@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /tmp/Sem_Praca_UDSP/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,6 +85,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,17 +130,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Sem_Praca_UDSP
+# Target rules for targets named Sem_Praca_UDSP-master
 
 # Build rule for target.
-Sem_Praca_UDSP: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sem_Praca_UDSP
-.PHONY : Sem_Praca_UDSP
+Sem_Praca_UDSP-master: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sem_Praca_UDSP-master
+.PHONY : Sem_Praca_UDSP-master
 
 # fast build rule for target.
-Sem_Praca_UDSP/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/build
-.PHONY : Sem_Praca_UDSP/fast
+Sem_Praca_UDSP-master/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/build
+.PHONY : Sem_Praca_UDSP-master/fast
+
+client.o: client.c.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/client.c.o
+.PHONY : client.c.o
+
+client.i: client.c.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/client.c.i
+.PHONY : client.c.i
+
+client.s: client.c.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/client.c.s
+.PHONY : client.c.s
 
 main.o: main.c.o
 
@@ -148,7 +175,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -157,7 +184,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -166,8 +193,62 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/main.c.s
 .PHONY : main.c.s
+
+manager.o: manager.c.o
+
+.PHONY : manager.o
+
+# target to build an object file
+manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/manager.c.o
+.PHONY : manager.c.o
+
+manager.i: manager.c.i
+
+.PHONY : manager.i
+
+# target to preprocess a source file
+manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/manager.c.i
+.PHONY : manager.c.i
+
+manager.s: manager.c.s
+
+.PHONY : manager.s
+
+# target to generate assembly for a file
+manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/manager.c.s
+.PHONY : manager.c.s
+
+server.o: server.c.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/server.c.o
+.PHONY : server.c.o
+
+server.i: server.c.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/server.c.i
+.PHONY : server.c.i
+
+server.s: server.c.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/server.c.s
+.PHONY : server.c.s
 
 table.o: table.c.o
 
@@ -175,7 +256,7 @@ table.o: table.c.o
 
 # target to build an object file
 table.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/table.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/table.c.o
 .PHONY : table.c.o
 
 table.i: table.c.i
@@ -184,7 +265,7 @@ table.i: table.c.i
 
 # target to preprocess a source file
 table.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/table.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/table.c.i
 .PHONY : table.c.i
 
 table.s: table.c.s
@@ -193,7 +274,7 @@ table.s: table.c.s
 
 # target to generate assembly for a file
 table.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP.dir/build.make CMakeFiles/Sem_Praca_UDSP.dir/table.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sem_Praca_UDSP-master.dir/build.make CMakeFiles/Sem_Praca_UDSP-master.dir/table.c.s
 .PHONY : table.c.s
 
 # Help Target
@@ -204,10 +285,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Sem_Praca_UDSP"
+	@echo "... Sem_Praca_UDSP-master"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... manager.o"
+	@echo "... manager.i"
+	@echo "... manager.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 	@echo "... table.o"
 	@echo "... table.i"
 	@echo "... table.s"
