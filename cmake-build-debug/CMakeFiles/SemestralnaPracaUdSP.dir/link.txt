@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/SemestralnaPracaUdSP.dir/main.c.o CMakeFiles/SemestralnaPracaUdSP.dir/table.c.o CMakeFiles/SemestralnaPracaUdSP.dir/manager.c.o CMakeFiles/SemestralnaPracaUdSP.dir/server.c.o CMakeFiles/SemestralnaPracaUdSP.dir/client.c.o -o SemestralnaPracaUdSP 

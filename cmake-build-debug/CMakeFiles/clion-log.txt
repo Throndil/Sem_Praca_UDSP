@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/tmp.u3Pdlh2bM7
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/Sem_Praca_UDSP
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmp.u3Pdlh2bM7/cmake-build-debug
+-- Build files have been written to: /tmp/Sem_Praca_UDSP/cmake-build-debug

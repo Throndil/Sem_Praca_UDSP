@@ -7,6 +7,10 @@
           <mappings>
             <mapping deploy="/tmp/Sem_Praca_UDSP" local="$PROJECT_DIR$" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
         </serverdata>
       </paths>
       <paths name="frios2 (d2c1f366-b76f-4098-9d44-bf69dc948f69)">
