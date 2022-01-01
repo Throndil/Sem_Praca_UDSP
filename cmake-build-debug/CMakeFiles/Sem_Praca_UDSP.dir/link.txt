@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/Sem_Praca_UDSP.dir/main.c.o CMakeFiles/Sem_Praca_UDSP.dir/table.c.o -o Sem_Praca_UDSP 
