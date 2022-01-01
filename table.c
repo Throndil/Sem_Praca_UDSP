@@ -7,7 +7,7 @@
 #include <ctype.h>
 #include "table.h"
 
-#define ROW_LENGTH 500
+#define ROW_LENGTH 1024
 
 static _Bool tableExists(const char* tableName) {
     if (access(tableName, F_OK) == 0) {
@@ -29,18 +29,6 @@ static int numberOfRows(char* name) {
     fclose(tab_file);
 
     return count - 2;
-}
-
-static void toLowerArray(char **array) {
-    int i = 0, j;
-    while (array[i] != NULL){
-        j = 0;
-        while (array[i][j] != '\0') {
-            array[i][j] = tolower(array[i][j]);
-            j++;
-        }
-        i++;
-    }
 }
 
 static int numberOfColumns(char* name) {
@@ -150,10 +138,10 @@ void initTable(Table* t) {
     t->types = NULL;
 }
 
-void openTable(Table* t, char* name) {
+_Bool openTable(Table* t, char* name) {
     if (!tableExists(name)) {
         perror("Table does not exists.");
-        return;
+        return false;
     }
 
     t->row_count = numberOfRows(name);
@@ -161,15 +149,21 @@ void openTable(Table* t, char* name) {
     t->columnNames = getColumnNames(name, t->columns_count);
     t->types = getTypes(name, t->columns_count);
     strcpy(t->name, name);
+
+    return true;
 }
 
 void closeTable(Table* t) {
-    t->row_count = 0;
-    t->columns_count = 0;
+    for (int i = 0; i < t->columns_count; i ++) {
+        free(t->columnNames[i]);
+        free(t->types[i]);
+    }
     free(t->columnNames);
     free(t->types);
     t->columnNames = NULL;
     t->types = NULL;
+    t->row_count = 0;
+    t->columns_count = 0;
     memset(t->name, 0, sizeof(t->name));
 }
 
@@ -190,8 +184,6 @@ _Bool createTable(char name[TABLE_NAME_SIZE], int num_columns, char** column_nam
     char fileName[TABLE_NAME_SIZE];
     strcpy(fileName, name);
     strcat(fileName, "_tab.txt");
-    //toLowerArray(types);
-    //printf("%s", fileName);
     if (tableExists(fileName)) {
         perror("File already exists.");
         return false;
@@ -318,7 +310,7 @@ _Bool deleteData(const char* tableName, int id) {
     }
 }
 
-char* getTypeOfColumn(Table* t, char* columnName) {
+char* getTypeOfColumn(Table* t,const char* columnName) {
     for (int i = 0; i < t->columns_count; i++) {
         if (strcmp(columnName, t->columnNames[i]) == 0)
             return t->types[i];
@@ -327,43 +319,53 @@ char* getTypeOfColumn(Table* t, char* columnName) {
     return NULL;
 }
 
-void printTable(Table* t) {
+char* printTable(Table* t, char* dest) {
     char str[ROW_LENGTH];
 
     if(!tableExists(t->name)) {
-        perror("Table does not exists");
-        return;
+        sprintf(dest, "%s", "Error.");
+        return dest;
     }
 
     FILE* tab_file = fopen(t->name, "r");
 
+    sprintf(dest + strlen(dest), "%s", "\n");
+
     while (fgets(str, ROW_LENGTH, tab_file) != NULL) {
-        printf("%s", str);
+        sprintf(dest + strlen(dest), "%s", str);
     }
 
     fclose(tab_file);
+
+    printf("%s", dest);
+
+    return dest;
 }
 
-void printDataWithSubstr(Table* t, char* substr) {
+char* printDataWithSubstr(Table* t, char* substr, char* dest) {
     char str[ROW_LENGTH];
 
     if(!tableExists(t->name)) {
-        perror("Table does not exists");
-        return;
+        sprintf(dest + strlen(dest), "%s", "Error.");
+        return dest;
     }
 
     FILE* tab_file = fopen(t->name, "r");
 
+    sprintf(dest + strlen(dest), "%s", "\n");
+
     while (fgets(str, ROW_LENGTH, tab_file) != NULL) {
         if (strstr(str, substr) != NULL) {
-            printf("%s", str);
+            sprintf(dest + strlen(dest), "%s", str);
         }
     }
 
     fclose(tab_file);
+
+    return dest;
 }
 
-_Bool sortTableAndPrint(Table* t, const char* column, void (*fun)(const void*,const void*), TYPE enumType) {
+char* sortTableAndPrint(Table* t, const char* column, void (*fun)(const void*,const void*), TYPE enumType, char* dest) {
     int i, index, columnIndex = 0, counter = 0;
     char** columns, **rows;
     char str[ROW_LENGTH], tempStr[ROW_LENGTH];
@@ -378,8 +380,8 @@ _Bool sortTableAndPrint(Table* t, const char* column, void (*fun)(const void*,co
     }
 
     if(!tableExists(t->name)) {
-        perror("Table does not exists");
-        return false;
+        sprintf(dest + strlen(dest), "%s", "Error");
+        return dest;
     }
 
     FILE* tab_file = fopen(t->name, "r");
@@ -470,13 +472,19 @@ _Bool sortTableAndPrint(Table* t, const char* column, void (*fun)(const void*,co
 
     }
 
+    sprintf(dest + strlen(dest), "%s", "\n");
     for(i = 0; i < t->row_count; i++) {
-        printf("%s", rows[i]);
+        sprintf(dest + strlen(dest), "%s", rows[i]);
+    }
+
+    for(i = 0; i < t->row_count; i++) {
+        free(rows[i]);
+        free(columns[i]);
     }
 
     fclose(tab_file);
     free(rows);
     free(columns);
 
-    return true;
+    return dest;
 }
