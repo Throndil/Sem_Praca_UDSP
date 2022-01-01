@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/tmp/Sem_Praca_UDSP/cmake-build-debug"/>
+				<Option working_dir="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/tmp/Sem_Praca_UDSP/cmake-build-debug"/>
+				<Option working_dir="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/tmp/Sem_Praca_UDSP/cmake-build-debug"/>
+				<Option working_dir="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SemestralnaPracaUdSP">
-				<Option output="/tmp/Sem_Praca_UDSP/cmake-build-debug/SemestralnaPracaUdSP" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/Sem_Praca_UDSP/cmake-build-debug"/>
+				<Option output="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/SemestralnaPracaUdSP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 SemestralnaPracaUdSP"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 SemestralnaPracaUdSP"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SemestralnaPracaUdSP/fast">
-				<Option output="/tmp/Sem_Praca_UDSP/cmake-build-debug/SemestralnaPracaUdSP" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/Sem_Praca_UDSP/cmake-build-debug"/>
+				<Option output="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/SemestralnaPracaUdSP" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.u3Pdlh2bM7/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,23 +69,41 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 SemestralnaPracaUdSP/fast"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/tmp/Sem_Praca_UDSP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 SemestralnaPracaUdSP/fast"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/tmp/tmp.u3Pdlh2bM7/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/Sem_Praca_UDSP/main.c">
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/client.c">
 			<Option target="SemestralnaPracaUdSP"/>
 		</Unit>
-		<Unit filename="/tmp/Sem_Praca_UDSP/table.c">
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/client.h">
 			<Option target="SemestralnaPracaUdSP"/>
 		</Unit>
-		<Unit filename="/tmp/Sem_Praca_UDSP/table.h">
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/main.c">
 			<Option target="SemestralnaPracaUdSP"/>
 		</Unit>
-		<Unit filename="/tmp/Sem_Praca_UDSP/CMakeLists.txt">
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/manager.c">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/manager.h">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/server.c">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/server.h">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/table.c">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/table.h">
+			<Option target="SemestralnaPracaUdSP"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.u3Pdlh2bM7/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

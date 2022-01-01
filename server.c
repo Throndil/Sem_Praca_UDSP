@@ -8,9 +8,10 @@
 #include <arpa/inet.h>
 #include "manager.h"
 #include <stdbool.h>
+#include "table.h"
 
 #define BUFFER_SIZE 1024
-#define PORT 9001
+#define PORT 9002
 
 static void actions(int socket, char* buffer) {
     manGetActions(buffer);
@@ -22,11 +23,11 @@ static void actions(int socket, char* buffer) {
 static void tableCreation(int socket, char* buffer) {
     char **columns;
     char **types;
-    char tableName[40];
-    int numberOfColumns;
+    char tableName[TABLE_NAME_SIZE];
+    int numberOfColumns, i;
 
     bzero(buffer, sizeof (&buffer));
-    sprintf(buffer, "%s", "Enter the name: ");
+    sprintf(buffer, "%s", "Enter the name of table: ");
     send(socket, buffer, strlen(buffer), 0);
     bzero(buffer, sizeof (&buffer));
 
@@ -45,11 +46,11 @@ static void tableCreation(int socket, char* buffer) {
     types = (char**)malloc(sizeof (char*) * numberOfColumns);
 
     columns[0] = (char*)malloc(sizeof (char));
-    strcpy(columns[0], "ID");
+    strcpy(columns[0], "id");
     types[0] = (char*)malloc(sizeof (char));
     strcpy(types[0], "int");
 
-    for (int i = 1; i < numberOfColumns; i++) {
+    for (i = 1; i < numberOfColumns; i++) {
         columns[i] = (char*)malloc(sizeof (char));
         types[i] = (char*)malloc(sizeof (char));
         bzero(buffer, sizeof (&buffer));
@@ -76,6 +77,181 @@ static void tableCreation(int socket, char* buffer) {
     manCreateTable(buffer,tableName, numberOfColumns, columns, types);
     send(socket, buffer, strlen(buffer), 0);
     bzero(buffer, sizeof (&buffer));
+
+    for (i = 0; i < numberOfColumns; i++) {
+        free(columns[i]);
+        free(types[i]);
+    }
+    free(columns);
+    free(types);
+}
+
+static void tableDelete(int socket, char* buffer) {
+    char tableName[TABLE_NAME_SIZE];
+
+    bzero(buffer, sizeof (&buffer));
+    sprintf(buffer, "%s", "Enter the name of table: ");
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+
+    recv(socket, buffer, 1024, 0);
+    strtok(buffer, "txt");
+    strcat(buffer, "tab.txt");
+    strcpy(tableName, buffer);
+
+    bzero(buffer, sizeof (&buffer));
+
+    manDeleteTable(buffer, tableName);
+
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+}
+
+static void tableDeleteData(int socket, char* buffer, Table* t) {
+    int id;
+
+    bzero(buffer, sizeof (&buffer));
+    sprintf(buffer, "%s", "Enter id of data to be deleted: ");
+    send(socket, buffer, strlen(buffer), 0);
+
+    bzero(buffer, sizeof (&buffer));
+    recv(socket, buffer, 1024, 0);
+    id = atoi(buffer);
+    bzero(buffer, sizeof (&buffer));
+
+    manDeleteData(buffer, t->name, id);
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+}
+
+static void tableAddData(int socket, char* buffer, Table* t) {
+    char** data;
+    int i;
+    data = (char**)malloc(sizeof (char*) * (t->columns_count - 1));
+
+    for (i = 0; i < t->columns_count - 1; i++) {
+        bzero(buffer, sizeof (&buffer));
+        data[i] = (char*)malloc(sizeof (char));
+        sprintf(buffer, "%s %s (%s)", "Enter : ", t->columnNames[i + 1], t->types[i + 1]);
+        send(socket, buffer, strlen(buffer), 0);
+        bzero(buffer, sizeof (&buffer));
+        recv(socket, buffer, 1024, 0);
+        strcpy(data[i], buffer);
+    }
+
+    bzero(buffer, sizeof (&buffer));
+    manAddData(buffer, t->name, data, t->columns_count);
+
+    for (i = 0; i < t->columns_count - 1; i++) {
+        free(data[i]);
+    }
+    free(data);
+
+    send(socket, buffer, strlen(buffer), 0);
+}
+
+static void tablePrintTable(int socket, char* buffer, Table* t) {
+    bzero(buffer, sizeof (&buffer));
+    manPrintTable(buffer, t);
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+}
+
+static void tablePrintTableWithSubstr(int socket, char* buffer, Table* t) {
+    char substr[BUFFER_SIZE];
+
+    bzero(buffer, sizeof (&buffer));
+    sprintf(buffer, "%s", "Enter substr: ");
+    send(socket, buffer, strlen(buffer), 0);
+
+    bzero(buffer, sizeof (&buffer));
+    recv(socket, buffer, 1024, 0);
+    strcpy(substr, buffer);
+    bzero(buffer, sizeof (&buffer));
+
+    manPrintTableWithSubstr(buffer, substr, t);
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+}
+
+static void tableSort(int socket, char* buffer, Table* t) {
+    char columnName[BUFFER_SIZE];
+
+    bzero(buffer, sizeof (&buffer));
+    sprintf(buffer, "%s", "Enter the name of column to sort: ");
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+
+    recv(socket, buffer, 1024, 0);
+    strcpy(columnName, buffer);
+    bzero(buffer, sizeof (&buffer));
+
+    manSortTable(t, columnName, buffer);
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+}
+
+static void tableOpenedActions(int socket, char* buffer, Table* t) {
+    int choice = 0;
+    _Bool tableOpened = true;
+
+    while(tableOpened) {
+        bzero(buffer, sizeof (&buffer));
+        manGetOpenedTableActions(buffer);
+        send(socket, buffer, strlen(buffer), 0);
+
+        bzero(buffer, sizeof (&buffer));
+        recv(socket, buffer, 1024, 0);
+
+        choice = atoi(buffer);
+
+        switch (choice) {
+            case 1:
+                tableAddData(socket, buffer, t);
+                break;
+            case 2:
+                tableDeleteData(socket, buffer, t);
+                break;
+            case 3:
+                tablePrintTable(socket, buffer, t);
+                break;
+            case 4:
+                tablePrintTableWithSubstr(socket, buffer, t);
+                break;
+            case 5:
+                tableSort(socket, buffer, t);
+                break;
+            case 6:
+                tableOpened = false;
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+static void tableOpening(int socket, char* buffer) {
+    char name[TABLE_NAME_SIZE];
+
+    Table t;
+    initTable(&t);
+
+    bzero(buffer, sizeof (&buffer));
+    sprintf(buffer, "%s", "Enter the name of table: ");
+    send(socket, buffer, strlen(buffer), 0);
+    bzero(buffer, sizeof (&buffer));
+
+    recv(socket, buffer, 1024, 0);
+    strtok(buffer, "txt");
+    strcat(buffer, "tab.txt");
+    strcpy(name, buffer);
+
+    bzero(buffer, sizeof (&buffer));
+    manOpenTable(buffer, &t, name);
+
+    send(socket, buffer, strlen(buffer), 0);
+
+    tableOpenedActions(socket, buffer, &t);
 }
 
 int serverStart(){
@@ -127,10 +303,19 @@ int serverStart(){
             close(sockfd);
             while(1){
                 actions(newSocket, buffer);
-
-                if (atoi(buffer) == 1) {
-                    tableCreation(newSocket, buffer);
+                switch (atoi(buffer)) {
+                    case 1:
+                        tableCreation(newSocket, buffer);
+                        break;
+                    case 2:
+                        tableOpening(newSocket, buffer);
+                        break;
+                    case 3:
+                        tableDelete(newSocket, buffer);
+                    default:
+                        break;
                 }
+
                 if(strcmp(buffer, ":exit") == 0){
                     printf("Disconnected from %s:%d\n", inet_ntoa(newAddr.sin_addr), ntohs(newAddr.sin_port));
                     break;

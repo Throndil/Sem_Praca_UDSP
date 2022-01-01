@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 #include "manager.h"
 
-#define PORT 9001
+#define PORT 9002
 
 int clientStart(){
 
@@ -41,23 +41,23 @@ int clientStart(){
         printf("Server: \t%s\n", buffer);
     }
 
-    bzero(buffer, sizeof(buffer));
     while(1){
         printf("Client: \t");
         scanf("%s", &buffer[0]);
         send(clientSocket, buffer, strlen(buffer), 0);
-        bzero(buffer, sizeof (buffer));
 
         if(strcmp(buffer, ":exit") == 0){
             close(clientSocket);
             printf("[-]Disconnected from server.\n");
             exit(0);
         }
+        bzero(buffer, sizeof (buffer));
 
         if(recv(clientSocket, buffer, 1024, 0) < 0){
             printf("[-]Error in receiving data.\n");
         }else{
             printf("Server: \t%s\n", buffer);
+
         }
     }
 
