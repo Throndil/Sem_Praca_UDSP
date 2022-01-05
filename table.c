@@ -38,8 +38,8 @@ static int numberOfColumns(char* name) {
     FILE *tab_file = fopen(name, "r");
 
     fgets(columns, ROW_LENGTH, tab_file);
-    for (i = 0; columns[i] != '\n'; i++)
-        if (columns[i] == ';')
+    for (i = 0; *(columns + i) != '\n'; i++)
+        if (*(columns + i) == ';')
             count++;
 
     fclose(tab_file);
@@ -60,8 +60,8 @@ static char** getColumnNames(char* name, int numberOfColumns) {
 
     w = strtok(str, ";");
     while (w != NULL) {
-        columns[i] = (char *)malloc(sizeof (char));
-        strcpy(columns[i], w);
+        *(columns + i) = (char *)malloc(sizeof (char));
+        strcpy(*(columns + i), w);
         w = strtok(NULL, ";");
         if (w != NULL)
             w[strcspn(w, "\n")] = 0;
@@ -92,8 +92,8 @@ static char** getTypes(char* name, int numberOfColumns) {
 
     w = strtok(str, ";");
     while (w != NULL) {
-        types[i] = (char *)malloc(sizeof (char));
-        strcpy(types[i], w);
+        *(types + i) = (char *)malloc(sizeof (char));
+        strcpy(*(types + i), w);
         w = strtok(NULL, ";");
         if (w != NULL)
             w[strcspn(w, "\n")] = 0;
@@ -192,7 +192,7 @@ _Bool createTable(char name[TABLE_NAME_SIZE], int num_columns, char** column_nam
     FILE* tab_file = fopen(fileName, "w");
 
     for (i = 0; i < num_columns;i++) {
-        fputs(column_names[i], tab_file);
+        fputs(*(column_names+ i), tab_file);
         if (i + 1 == num_columns) {
             fputc('\n', tab_file);
         } else {
@@ -201,7 +201,7 @@ _Bool createTable(char name[TABLE_NAME_SIZE], int num_columns, char** column_nam
     }
 
     for (i = 0; i < num_columns;i++) {
-        fputs(types[i], tab_file);
+        fputs(*(types + i), tab_file);
         if (i + 1 == num_columns) {
             fputc('\n', tab_file);
         } else {
@@ -246,7 +246,7 @@ _Bool addData(const char* tableName, char** data, int numberOfColumns) {
     fputs(str, tab_file);
     fputs(";", tab_file);
     for (i = 0; i < numberOfColumns - 1; i++) {
-        fputs(data[i], tab_file);
+        fputs(*(data + i), tab_file);
         if (i + 1 < numberOfColumns - 1) {
             fputs(";", tab_file);
         } else {

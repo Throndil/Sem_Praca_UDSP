@@ -42,6 +42,7 @@ int clientStart(){
     }
 
     while(1){
+        bzero(buffer, sizeof (buffer));
         printf("Client: \t");
         scanf("%s", &buffer[0]);
         send(clientSocket, buffer, strlen(buffer), 0);
@@ -51,7 +52,6 @@ int clientStart(){
             printf("[-]Disconnected from server.\n");
             exit(0);
         }
-        bzero(buffer, sizeof (buffer));
 
         if(recv(clientSocket, buffer, 1024, 0) < 0){
             printf("[-]Error in receiving data.\n");

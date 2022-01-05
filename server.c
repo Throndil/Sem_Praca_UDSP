@@ -31,6 +31,7 @@ static void tableCreation(int socket, char* buffer) {
     send(socket, buffer, strlen(buffer), 0);
     bzero(buffer, sizeof (&buffer));
 
+
     recv(socket, buffer, 1024, 0);
     strcpy(tableName, buffer);
 
